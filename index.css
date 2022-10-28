@@ -1,10 +1,14 @@
 * {
     font-family: 'Open Sans', sans-serif;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 body {
     display: flex;
     justify-content: center;
+    align-items: center;
     background: linear-gradient(#ccffaa, #1e5b53);
 }
 
@@ -14,7 +18,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
     width: 100%;
     display: none;
 }
@@ -24,8 +27,6 @@ body {
     padding: 40px;
     border-radius: 20px;
     transform: scale(1);
-    height: 200px;
-    width: 80%;
     box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.6);
     -webkit-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.6);
@@ -48,8 +49,6 @@ body {
 } */
 #createGame {
     width: 90%;
-    position: absolute;
-    top: calc(50vh - 29px);
 }
 
 .container-btn {
@@ -99,14 +98,39 @@ body {
 }
 
 .playerlist {
-    width: 100%;
     color: #fff;
-    padding-top: 40px;
     font: 1.7rem;
-    overflow: scroll;
+    max-height:200px;
+    overflow-y: scroll;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 0 20px;
+    margin-top: 40px;
+} 
+
+.li-title{
+    display: block;
+    padding: 0.8rem 0;
+    font-size: 1.5rem;
 }
 
 .list-item {
     display: block;
     padding: 0.8rem 0;
+}
+
+.playerlist :nth-child(2){
+    border-top: 1px solid;
+}
+
+@media screen and (max-width:480px) {
+    .container-btn{
+        flex-direction: column;
+    }
+    .btn{
+        width: 100%!important;
+        margin-right: 0!important;
+        margin-top: 30px;
+
+    }
 }
