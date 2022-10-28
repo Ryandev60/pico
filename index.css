@@ -5,7 +5,6 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
     background: linear-gradient(#ccffaa, #1e5b53);
 }
 
@@ -17,23 +16,23 @@ body {
     align-items: center;
     height: 400px;
     width: 100%;
-    
+    display: none;
 }
 
-.sentence{
+.sentence {
     background: linear-gradient(to bottom left, #fff, #ddddda);
     padding: 40px;
     border-radius: 20px;
     transform: scale(1);
     height: 200px;
     width: 80%;
-    box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.6);
-    -webkit-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.6);
-    -moz-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.6);
+    box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.6);
     transition-duration: 250ms;
 }
-.sentence:hover{
- transform: scale(1.02);
+.sentence:hover {
+    transform: scale(1.02);
 }
 
 #showSentence {
@@ -41,4 +40,73 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+/* button {
+    width: 50px;
+    height: 50px;
+} */
+#createGame {
+    width: 90%;
+    position: absolute;
+    top: calc(50vh - 29px);
+}
+
+.container-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: 10px 10px 14px 0px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 10px 10px 14px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 10px 10px 14px 0px rgba(0, 0, 0, 0.4);
+}
+
+.btn-text {
+    width: 50%;
+    color: #999999;
+    outline: none !important;
+}
+
+.add-btn {
+    width: 20%;
+    transform: scale(1);
+    background: linear-gradient(to bottom left, #172be8, #0ae8f8);
+}
+
+.launch-btn {
+    width: 20%;
+    background: linear-gradient(to bottom left, #ff0000, #ffa200);
+    transform: scale(1);
+}
+
+.launch-btn,
+.add-btn {
+    transform: scale(1);
+    transition-duration: 250ms;
+}
+
+.launch-btn:hover,
+.add-btn:hover {
+    transform: scale(1.05);
+}
+
+.playerlist {
+    width: 100%;
+    color: #fff;
+    padding-top: 40px;
+    font: 1.7rem;
+    overflow: scroll;
+}
+
+.list-item {
+    display: block;
+    padding: 0.8rem 0;
 }

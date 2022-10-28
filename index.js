@@ -25,20 +25,21 @@ const arrayOfSentences = [
     ],
 ]
 
-let arrayOfPlayer = [
-    'Jéremy',
-    'Adrien.M',
-    'Anthony',
-    'Dylan',
-    'Ryan',
-    // 'Adrien.p',
+let arrayOfPlayer = []
 
-    // 'Cylia',
-    // 'Aymeric',
-    // 'Alexis',
-    // 'Alexandre',
-    // 'Léa',
-]
+addPlayer.addEventListener('click', () => {
+    if (insertPlayer.value !== '') {
+        arrayOfPlayer.push(insertPlayer.value)
+        console.log(arrayOfPlayer)
+        showPlayers.innerHTML += `<li class="list-item"> ${insertPlayer.value}`
+        insertPlayer.value = ''
+    }
+})
+
+startGame.addEventListener('click', () => {
+    createGame.style.display = 'none'
+    inGame.style.display = 'block'
+})
 
 document.body.addEventListener('click', () => {
     switchSentence()
